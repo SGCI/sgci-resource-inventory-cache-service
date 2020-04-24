@@ -1,0 +1,30 @@
+{
+  "name": "resource-api",
+  "version": "1.0.0",
+  "description": "Graphql API for SGCI Resource Catalog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SGCI/computational-resource-reference-implimentation.git"
+  },
+  "keywords": [
+    "SGCI",
+    "Resources"
+  ],
+  "author": "Dimuthu Wannipurage",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SGCI/computational-resource-reference-implimentation/issues"
+  },
+  "homepage": "https://github.com/SGCI/computational-resource-reference-implimentation#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.10"
+  }
+}
