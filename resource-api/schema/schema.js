@@ -5,68 +5,6 @@ const _ = require('lodash');
 const SgciResource = require("../models/sgciResource");
 const mongoose = require("mongoose");
 
-var resourcesJson = [
-    {
-      "id": "1",
-      "name": "SCIGAP Development Storage",
-      "resourceType": "STORAGE",
-      "hosts": [
-        {
-          "hostname": "pgadev.scigap.org"
-        }
-      ],
-      "resource": {
-        "storageType": "POSIX",
-        "fileSystems": [
-          {
-            "rootDir": "/",
-            "workDir": "/data"
-          }
-        ]
-      }
-    },
-    {
-      "id": "2",
-      "name": "SCIGAP Staging Storage",
-      "resourceType": "STORAGE",
-      "hosts": [
-        {
-          "hostname": "pganew.staging.scigap.org"
-        }
-      ],
-      "resource": {
-        "storageType": "POSIX",
-        "fileSystems": [
-          {
-            "rootDir": "/",
-            "workDir": "/data"
-          }
-        ]
-      }
-    },
-    {
-        "id": "3",
-        "name": "Carbonate HPC",
-        "resourceType": "COMPUTE",
-        "resource": {
-          "schedulerType": "BATCH",
-          "connection": {
-            "connectionProtocol": "SSH",
-            "securityProtocol": "SSHKEYS",
-            "port": 22
-          },
-          "batchSystem": {
-            "jobManager": "SLURM",
-            "commandPaths": [
-              {
-                "name": "SUBMISSION"
-              }
-            ]
-          }
-        }
-    }
-  ];
-
 const SgciResourceType = new GraphQLObjectType({
     name: 'sgciResource',
     fields: () => ({
